@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=4 uid="uid://b31dw2bd63wna"]
+
+[ext_resource type="Script" uid="uid://btib8b8a6phbw" path="res://Scripts/backgound_parallax.gd" id="1_055b2"]
+[ext_resource type="Script" uid="uid://dffvcjwnkp06r" path="res://Scripts/level_2.gd" id="1_uhnj4"]
+[ext_resource type="Texture2D" uid="uid://byk1tvpj6eemn" path="res://Sprites/Backgrounds/backgroundDesert.png" id="2_055b2"]
+[ext_resource type="TileSet" uid="uid://cd3lqenroas3m" path="res://Sprites/Tiles/new_tile_set.tres" id="3_uhnj4"]
+[ext_resource type="PackedScene" uid="uid://bn6jkciabbau5" path="res://Scenes/player.tscn" id="4_42uki"]
+[ext_resource type="PackedScene" uid="uid://dhkan4plh8xl4" path="res://Scenes/coin.tscn" id="5_t7v2y"]
+[ext_resource type="PackedScene" uid="uid://4ptu1iopyy8y" path="res://Scenes/enemy.tscn" id="6_ait6c"]
+[ext_resource type="PackedScene" uid="uid://bqh5fdwoy13sc" path="res://Scenes/end_flag.tscn" id="7_vcilj"]
+[ext_resource type="PackedScene" uid="uid://drym5bh026dui" path="res://Scenes/level_3.tscn" id="9_uhnj4"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_uhnj4")
+
+[node name="Backgound" type="Node2D" parent="."]
+script = ExtResource("1_055b2")
+
+[node name="BackgroundSprite" type="Sprite2D" parent="Backgound"]
+modulate = Color(0.999998, 0.997677, 0.583234, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_055b2")
+
+[node name="BackgroundSprite4" type="Sprite2D" parent="Backgound"]
+modulate = Color(0.999998, 0.997677, 0.583234, 1)
+position = Vector2(-512, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_055b2")
+
+[node name="BackgroundSprite5" type="Sprite2D" parent="Backgound"]
+modulate = Color(0.999998, 0.997677, 0.583234, 1)
+position = Vector2(-1024, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_055b2")
+
+[node name="BackgroundSprite2" type="Sprite2D" parent="Backgound"]
+modulate = Color(0.999998, 0.997677, 0.583234, 1)
+position = Vector2(512, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_055b2")
+
+[node name="BackgroundSprite3" type="Sprite2D" parent="Backgound"]
+modulate = Color(0.999998, 0.997677, 0.583234, 1)
+position = Vector2(1024, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_055b2")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-23, -39)
+tile_map_data = PackedByteArray("AAACAAIAAAADAAMAAAABAAIAAAACAAMAAAAAAAIAAAACAAMAAAD//wIAAAABAAMAAAD//wMAAAABAAYAAAD//wQAAAABAAYAAAD//wUAAAABAAYAAAD//wYAAAABAAcAAAACAAYAAAADAAcAAAACAAUAAAADAAYAAAACAAQAAAADAAYAAAACAAMAAAADAAYAAAABAAYAAAACAAcAAAAAAAYAAAACAAcAAAAAAAUAAAACAAYAAAABAAUAAAACAAYAAAABAAQAAAACAAYAAAAAAAQAAAACAAYAAAAAAAMAAAACAAYAAAABAAMAAAACAAYAAAAGAAIAAAACAAYAAAAHAAEAAAACAAYAAAAIAAAAAAACAAYAAAAJAP//AAACAAMAAAAKAP//AAACAAMAAAALAP//AAACAAMAAAAMAP//AAACAAMAAAANAP//AAADAAMAAAAGAAMAAAACAAYAAAAGAAQAAAACAAYAAAAGAAUAAAACAAYAAAAGAAYAAAACAAcAAAAHAAYAAAACAAcAAAAIAAYAAAACAAcAAAAJAAYAAAACAAcAAAAKAAYAAAACAAcAAAAOAAAAAAADAAMAAAAPAAEAAAADAAMAAAAPAAIAAAADAAYAAAAPAAMAAAADAAYAAAAPAAQAAAADAAYAAAAPAAUAAAADAAYAAAAPAAYAAAACAAcAAAAOAAYAAAACAAcAAAANAAYAAAACAAcAAAAMAAYAAAACAAcAAAALAAYAAAACAAcAAAAHAAUAAAACAAYAAAAHAAQAAAACAAYAAAAHAAMAAAACAAYAAAAHAAIAAAACAAYAAAAIAAIAAAACAAYAAAAIAAEAAAACAAYAAAAJAAEAAAACAAYAAAAJAAAAAAACAAYAAAAKAAAAAAACAAYAAAALAAAAAAACAAYAAAAMAAAAAAACAAYAAAANAAAAAAACAAYAAAANAAEAAAACAAYAAAAOAAEAAAACAAYAAAAOAAIAAAACAAYAAAAOAAMAAAACAAYAAAAOAAQAAAACAAYAAAAOAAUAAAACAAYAAAANAAUAAAACAAYAAAAMAAUAAAACAAYAAAALAAUAAAACAAYAAAAKAAUAAAACAAYAAAAJAAUAAAACAAYAAAAIAAUAAAACAAYAAAAIAAQAAAACAAYAAAAIAAMAAAACAAYAAAAJAAMAAAACAAYAAAAJAAQAAAACAAYAAAAKAAQAAAACAAYAAAALAAQAAAACAAYAAAAMAAQAAAACAAYAAAANAAQAAAACAAYAAAANAAMAAAACAAYAAAAMAAMAAAACAAYAAAALAAMAAAACAAYAAAAKAAMAAAACAAYAAAAJAAIAAAACAAYAAAAKAAIAAAACAAYAAAALAAIAAAACAAYAAAAMAAIAAAACAAYAAAANAAIAAAACAAYAAAAMAAEAAAACAAYAAAALAAEAAAACAAYAAAAKAAEAAAACAAYAAAATAAEAAAAAAAMAAAAFAAIAAAABAAMAAAAGAAEAAAABAAMAAAAHAAAAAAABAAMAAAAIAP//AAABAAMAAAAFAAMAAAABAAYAAAAFAAQAAAABAAYAAAAFAAUAAAABAAYAAAAFAAYAAAABAAcAAAATAAIAAAAAAAYAAAATAAMAAAAAAAcAAAAXAAIAAAAAAAMAAAAXAAMAAAAAAAYAAAAXAAQAAAAAAAcAAAAbAAMAAAAAAAcAAAAbAAIAAAAAAAYAAAAbAAEAAAAAAAMAAAAfAAEAAAABAAMAAAAjAAEAAAACAAMAAAAiAAEAAAACAAMAAAAhAAEAAAACAAMAAAAgAAEAAAACAAMAAAAkAAEAAAADAAMAAAAkAAIAAAADAAYAAAAfAAIAAAABAAYAAAAkAAMAAAADAAcAAAAfAAMAAAABAAcAAAAgAAMAAAACAAcAAAAhAAMAAAACAAcAAAAiAAMAAAACAAcAAAAjAAMAAAACAAcAAAAjAAIAAAACAAYAAAAiAAIAAAACAAYAAAAhAAIAAAACAAYAAAAgAAIAAAACAAYAAAAKAP7/AAAHAAYAAAD//wEAAAAHAAYAAAAgAAAAAAAHAAYAAAA=")
+tile_set = ExtResource("3_uhnj4")
+
+[node name="Player" parent="." instance=ExtResource("4_42uki")]
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(94, -30)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(133, -66)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(255, -30)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(328, -29)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(472, -29)
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(50, 15)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(294, -1)
+move_speed = 15.0
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(508, 8)
+move_speed = 30.0
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(261, -59)
+move_direction = Vector2(300, 0)
+move_speed = 25.0
+
+[node name="EndFlag" parent="." instance=ExtResource("7_vcilj")]
+position = Vector2(605, -30)
+scene_to_load = ExtResource("9_uhnj4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

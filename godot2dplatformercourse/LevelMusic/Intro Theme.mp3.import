@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0k1go624g4ek"
+path="res://.godot/imported/Intro Theme.mp3-b0cf5ea121262685eccc0de17dddd12b.mp3str"
+
+[deps]
+
+source_file="res://LevelMusic/Intro Theme.mp3"
+dest_files=["res://.godot/imported/Intro Theme.mp3-b0cf5ea121262685eccc0de17dddd12b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c21y5fva30ga6"
+path="res://.godot/imported/Mushroom Theme.mp3-da6748efcd634fd3c632479b6cf553fd.mp3str"
+
+[deps]
+
+source_file="res://LevelMusic/Mushroom Theme.mp3"
+dest_files=["res://.godot/imported/Mushroom Theme.mp3-da6748efcd634fd3c632479b6cf553fd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
